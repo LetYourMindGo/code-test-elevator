@@ -26,6 +26,4 @@ app.use(cors());
 
 app.use(router.routes());
 
-const PORT = "https://stabelo-elevators-server.herokuapp.com/" || 3000;
-
-app.listen(PORT);
+app.listen(3000);
