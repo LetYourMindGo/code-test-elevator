@@ -1,3 +1,44 @@
-.title {
-  color: red; /* Just an example .. */
+.building {
+  min-width: 500px;
+  max-width: 500px;
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  margin-top: 1rem;
 }
+
+.button_panel {
+  padding: 0;
+  position: relative;
+}
+
+.button {
+  width: 2rem;
+  height: 2rem;
+  margin: 1rem;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  color: #777a7a;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 500px;
+    left: 0;
+    margin-top: 3.5rem;
+    height: 0.5em;
+    border-top: 5px solid rgb(154, 154, 154);
+    z-index: 1;
+  }
+}
+
+.shaft {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 0.25rem;
+  width: 100%;
+  bottom: 0;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #777a7a;
+ }

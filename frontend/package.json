@@ -31,10 +31,13 @@
   },
   "dependencies": {
     "@mdi/font": "^5.3.45",
+    "axios": "^0.27.2",
     "history": "^5.0.0",
     "qs": "^6.9.4",
-    "react": "^16.13.1",
+    "react": "^18.2.0",
+    "react-alert": "^7.0.3",
     "react-dom": "^16.13.1",
+    "react-popup": "^0.11.0",
     "react-router-dom": "^5.2.0",
     "tslib": "^2.0.0"
   },

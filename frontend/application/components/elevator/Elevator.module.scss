@@ -1,0 +1,22 @@
+.elevator {
+  display: flex;
+  width: 3rem;
+  height: 97.5%;
+  background-image: transparent;
+  align-items: flex-end;
+  padding: 0;
+  margin: 1rem;
+  z-index: 2;
+}
+
+.elevator_info {
+  display: flex;
+  margin: 0;
+  height: 1.9rem;
+  width: 100%;
+  background-color: yellow;
+  border: 0.05rem solid black;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
