@@ -12,14 +12,14 @@ class ImplementationPage extends React.Component {
     };
 
     loadElevators = async () => {
-        const data = await axios.get('http://localhost:3000/elevators');
+        const data = await axios.get('https://stabelo-elevators-server.herokuapp.com/elevators');
         this.setState({
             elevators: data.data
         });
     };
 
     callElevator = async (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-        const data = await axios.post('http://localhost:3000/elevators', {"level": e.currentTarget.value});
+        const data = await axios.post('https://stabelo-elevators-server.herokuapp.com/elevators', {"level": e.currentTarget.value});
         
         if(data.data === "All elevators are unavailable") {
             alert("All elevators are unavailable");
