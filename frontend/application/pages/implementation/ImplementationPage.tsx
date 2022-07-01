@@ -36,7 +36,7 @@ class ImplementationPage extends React.Component {
 
     public render() {
         return (
-            <div style={{background: "red"}}>
+            <>
                 <div className={css.building}>
                     <div className={css.button_panel}>
                         {this.state.floors.map(floor => (
@@ -49,7 +49,7 @@ class ImplementationPage extends React.Component {
                         )}
                     </div>
                 </div>
-            </div>
+            </>
         );
     };
 };
