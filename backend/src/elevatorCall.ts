@@ -4,10 +4,10 @@ export const elevatorCall = (level: number) => {
 
   for (let i = 0; i < elevators.length; i++) {
       elevators[i].timeout = 0;
-      if (elevators[i].isAvailable) {
-        elevators[i].levelDifference = Math.abs(elevators[i].currentLevel - level);
+      if (!elevators[i].isAvailable) {
+        elevators[i].levelDifference = 21;
       } else {
-        continue;
+        elevators[i].levelDifference = Math.abs(elevators[i].currentLevel - level);
       }
   }
 
@@ -22,5 +22,9 @@ export const elevatorCall = (level: number) => {
       return elevators.sort(({id: a}, {id: b}) => a - b);
   }, 2000 * activeElevator.levelDifference)
 
-  return elevators.sort(({id: a}, {id: b}) => a - b);
+  if (activeElevator.levelDifference === 21) {
+    return "All elevators are unavailable";
+  } else {
+    return elevators.sort(({id: a}, {id: b}) => a - b);
+  }
 }

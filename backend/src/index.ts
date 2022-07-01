@@ -8,7 +8,6 @@ import { elevators } from "./elevators";
 const app = new Koa();
 const router = new Router();
 
-// This is just an example route
 router.get("/elevators", (context) => {
     context.response.body = elevators;
     context.response.status = 200;
@@ -19,8 +18,6 @@ router.post("/elevators", (context) => {
     context.response.body = elevatorCall(selectedLevel);
     context.response.status = 200;
 });
-
-// Add additional routes for implementation here...
 
 app.use(bodyparser({
     enableTypes: ["json"],
